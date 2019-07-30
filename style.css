@@ -1,0 +1,95 @@
+ *, *::after, *::before {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+    font-family: 'Montserrat', sans-serif;
+ }
+
+ .slider {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100vh;
+     background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+     z-index: -1;
+ }
+
+
+ nav {
+     display: grid;
+     grid-template-columns: 10% 1fr 1fr 10%;
+     min-height: 10vh;
+     color: white;
+     align-items: center;
+ }
+
+ #logo {
+     grid-column: 2 / 3;
+     font-size: 24px;
+     color: #000;
+ }
+
+ .hamburger {
+     justify-self: end;
+ }
+
+ section {
+     display: flex;
+     height: 80vh;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .hero {
+     height: 60%;
+     width: 100%;
+     position: relative;
+ }
+
+ .hero img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .headline {
+     position: absolute;
+     top: 85%;
+     left: 15%;
+     font-size: 80px;
+     font-weight: 300;
+     transform: translate(-20%, -70%);
+     color: white;
+     z-index: 3;
+ }
+
+ .hero::after {
+     content: "";
+     background: black;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top: 0;
+     opacity: 0.6;
+ }
+
+ @media only screen and (max-width: 560px) {
+    .headline {
+        font-size: 50px;
+        width: 90%;
+        left: 25%;
+    }
+
+    nav {
+        margin-top: 20px;
+    }
+
+    #logo {
+        font-size: 21px;
+    }
+}
